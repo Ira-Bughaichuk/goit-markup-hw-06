@@ -41,7 +41,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 h1,
@@ -879,6 +878,12 @@ fill: var(--accent-color);
 .group-row{
     width: 100%;    
 }
+.group-row:not(:last-child) {
+    margin-bottom: 10px;
+}
+.form-row-title:not(:last-child) {
+    margin-bottom: 4px;
+}
 .form-row-title{
     font-family: 'Roboto';
     font-size: 12px;
@@ -904,7 +909,7 @@ fill: var(--accent-color);
 .modal-icon{
     position: absolute;
     top: 50%;
-    left:0; 
+    left: 12px; 
     
     transform: translateY(-50%);
     fill: var(--title-color);
@@ -923,6 +928,9 @@ fill: var(--accent-color);
 }
 
 /*textarea*/
+.group-row-textarea:not(:last-child) {
+    margin-bottom: 10px;
+}
 .form-row-textarea{
     width: 100%;
    min-height: 120px;
@@ -945,6 +953,9 @@ fill: var(--accent-color);
 }
 
 /*checkbox*/
+.group-row-checkbox:not(:last-child) {
+    margin-bottom: 33px;
+}
 .group-row-checkbox{
     width: 100%;
     display: flex;
@@ -1000,18 +1011,5 @@ fill: var(--accent-color);
     letter-spacing: 0.06em;
     color: var(--primary-text-color)
 }
-/**/
-/*.form-row-title {
-    margin-bottom: 4px;
-}
-.form-row-input {
-    margin-bottom: 10px;
-}
-.group-row-textarea {
- margin-bottom: 20px;
-}
-.group-row-checkbox {
- margin-bottom: 30px; /* not last child&&&*/
-
 
     
