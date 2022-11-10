@@ -1016,9 +1016,9 @@ fill: var(--accent-color);
     color: var(--accent-color);
     text-decoration: underline;
 }
-.form-input-checkbox:focus+.form-icon-checkbox {
+.form-input-checkbox:checked + .form-icon-checkbox {
     background-color: var(--accent-color);
-    background-image: url() no-repeate;
+    background-image: url(), no-repeate;
     background-size: contain;
     border-color: var(--accent-color);
     background-origin: border-box;
