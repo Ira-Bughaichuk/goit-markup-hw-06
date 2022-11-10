@@ -260,6 +260,11 @@ p{
 .feature-icon {
     fill:currentColor;
 }
+.feature-icon-text{
+
+    line-height: 1.71;
+    color: #757575;
+}
 
 
 .feature-list .title,
@@ -354,9 +359,11 @@ p{
 
 .team-content .title {
     margin-bottom: 10px;
+    line-height: 1.1875;
 }
 .team-item .text {
     margin-bottom: 16px;
+    line-height: 1.1875;
 }
 .team-icons{
     display:flex;
@@ -602,7 +609,9 @@ fill: var(--accent-color);
 .address-list .link,
 .address-list .link-address{
     font-style: normal;
-    text-decoration: none;   
+    text-decoration: none;  
+    line-height: 1.71;
+    
 }
 .address-list .link{
     color: var(--footer-link-color);
@@ -955,7 +964,66 @@ fill: var(--accent-color);
 /*checkbox*/
 .group-row-checkbox:not(:last-child) {
     margin-bottom: 33px;
+    
 }
+.group-row-checkbox {
+    width: 100%; 
+    position: relative;
+   
+}
+.form-label-checkbox{
+   position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+}
+/*
+.form-input-checkbox{ 
+   -webkit-appearence:none;
+   -moz--appearence: none;
+    appearance: none;
+    position: absolute;
+    
+}*/
+.form-icon-checkbox{
+    position: absolute;
+    display: inline-flex;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-color);
+    background-color: transparent;
+    margin-right: 7px;
+
+   
+}
+.form-input-checkbox:focus + .form-icon-checkbox {
+    background-color: var(--accent-color);
+    background-image: url() no-repeate;
+    background-size: contain;
+    border-color: var(--accent-color);
+    background-origin: border-box;
+}
+.modal-title-checkbox{
+    
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-link-checkbox {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+
+/*
 .group-row-checkbox{
     width: 100%;
     display: flex;
@@ -971,7 +1039,7 @@ fill: var(--accent-color);
     font-size: 14px;
     line-height: 1.71;
     color: var(--secondary-text-color);
-    cursor: pointer;/*dont work*/
+    cursor: pointer;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -984,6 +1052,7 @@ fill: var(--accent-color);
     color: var(--accent-color);
     text-decoration: underline;
 }
+*/
 
 
 /*button*/
