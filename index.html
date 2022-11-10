@@ -55,7 +55,7 @@
 
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="button primary" type="button" data-modal-open>Замовити послугу</button>
+        <button class="button primary" type="submit" data-modal-open>Замовити послугу</button>
       </section>
       <!--Переваги --features-->
       <section class="section">
@@ -632,7 +632,7 @@
           <div class="group-row" role="group">
             <label class="form-row-title" for="name">Ім'я</label>
             <div class="group-modal">
-              <input class="form-row-input" name="name" type="text" id="name" />
+              <input class="form-row-input" name="name" type="text" id="name" placeholder=" " />
 
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/sprite.svg#icon-person"></use>
@@ -644,7 +644,7 @@
             <label class="form-row-title" for="phone">Телефон</label>
 
             <div class="group-modal">
-              <input class="form-row-input" name="email" type="tell" id="phone" />
+              <input class="form-row-input" name="email" type="tell" id="phone" placeholder=" " />
               <svg class="modal-icon" width="18" height="18">
                 <use xlink:href="./images/sprite.svg#icon-mobil-phone"></use>
               </svg>
@@ -654,7 +654,7 @@
             <label class="form-row-title" for="email">Пошта</label>
 
             <div class="group-modal">
-              <input class="form-row-input" name="email" type="text" id="email" />
+              <input class="form-row-input" name="email" type="text" id="email" placeholder=" " />
               <svg class="modal-icon" width="18" height="18">
                 <use xlink:href="./images/sprite.svg#icon-email"></use>
               </svg>
@@ -671,25 +671,14 @@
             ></textarea>
           </div>
           <div class="group-row-checkbox" role="group">
-            <label for="form-label-checkbox">
-              <input class="form-input-checkbox" type="checkbox" name="checkbox" id="checkbox" />
+            <label class="form-label-checkbox">
+              <input class="form-input-checkbox" type="checkbox" name="checkbox" placeholder=" " />
               <span class="form-icon-checkbox"></span>
 
-              <span class="modal-title-checkbox">
-                Погоджуюся з розсилкою та приймаю
-                <a class="modal-link-checkbox">Умови договору</a>
-              </span>
-            </label>
-          </div>
-          <!--
-          <div class="group-row-checkbox" role="group">
-            <input class="form-checkbox" type="checkbox" name="checkbox" id="checkbox" />
-            <label for="form-title-checkbox"
-              >Погоджуюся з розсилкою та приймаю
+              Погоджуюся з розсилкою та приймаю
               <a class="modal-link-checkbox">Умови договору</a>
             </label>
           </div>
-          -->
           <div class="group-row-button">
             <button class="button-submit" type="submit">Відправити</button>
           </div>

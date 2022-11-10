@@ -758,13 +758,14 @@ fill: var(--accent-color);
     height: 100%;
     background-color: var(--backdrop-baground-color);
 }
+
 .backdrop-modal{
     position: absolute;
     display: block;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translate(-50%, -50%) rotate(0deg); /* анмація при викиду модалки*/
+    /*rotate(0deg) - початковий стан модалки, тобто перед transition*/
     padding: 40px;
 
     max-width: 528px;
@@ -781,6 +782,18 @@ fill: var(--accent-color);
 .backdrop.is-hidden{
     visibility: hidden;
     pointer-events: none;
+    opacity: 0;
+}
+/*анмація при викиду модалки*/
+.backdrop{
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-modal{
+    transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .backdrop-modal{
+    transform: translate(-50%, -50%) rotate(-180deg);
 }
 /*-----------------*/
 .close-modal{
@@ -967,95 +980,51 @@ fill: var(--accent-color);
     
 }
 .group-row-checkbox {
-    position: relative;
     width: 100%;
+}
+.form-label-checkbox{
     /*position center for label*/
     display: flex;
     justify-content: center;
-}
-.form-label-checkbox{
-   position: absolute;
-    display: flex;
     width: 100%;
 
-    /*dont work*/
     gap: 7px; 
-    align-items: center;   
+    align-items: center;  
+    
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--secondary-text-color);
+    cursor: pointer;
 }
-/*
 .form-input-checkbox{ 
    -webkit-appearence:none;
    -moz--appearence: none;
     appearance: none;
     position: absolute;
     
-}*/
+}
 .form-icon-checkbox{
-    position: absolute;
     display: inline-flex;
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-color);
-    background-color: transparent;
+    border-radius: 2px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
-}
-.modal-title-checkbox{
-    width: 100%;
-    font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--secondary-text-color);
-    cursor: pointer;
-    
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-image, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-link-checkbox {
     color: var(--accent-color);
     text-decoration: underline;
 }
-.form-input-checkbox:checked + .form-icon-checkbox {
+.form-input-checkbox:checked + .form-icon-checkbox { /*щоб клік відпрацьовував*/
     background-color: var(--accent-color);
-    background-image: url(), no-repeate;
+    background-image: url(../images/check.svg);
     background-size: contain;
     border-color: var(--accent-color);
     background-origin: border-box;
 }
-
-
-/*
-.group-row-checkbox{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    gap: 7px;
-}
-
-.form-title-checkbox{     
-    width: 100%;
-
-    font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--secondary-text-color);
-    cursor: pointer;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-title-checkbox:hover,
-.form-title-checkbox:focus{
-    color: var(--accent-color);
-}
-
-.modal-link-checkbox{
-    color: var(--accent-color);
-    text-decoration: underline;
-}
-*/
-
 
 /*button*/
 .group-row-button{
