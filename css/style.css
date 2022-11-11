@@ -534,15 +534,18 @@ p{
     justify-content: center;
     border: 1px solid var(--client-icon-color);
     border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .client-icon{
     fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
     border-color: var(--accent-color);
 }
+
 .client-link:hover .client-icon,
 .client-link:focus .client-icon{
     fill: var(--accent-color);
@@ -1022,6 +1025,7 @@ fill: var(--accent-color);
     background-color: var(--accent-color);
     background-image: url(../images/check.svg);
     background-size: contain;
+    background-position: center;
     border-color: var(--accent-color);
     background-origin: border-box;
 }
